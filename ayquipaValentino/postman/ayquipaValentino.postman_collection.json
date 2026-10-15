@@ -1,0 +1,340 @@
+{
+  "info": {
+    "name": "ayquipaValentino — HUB01 y HUB02",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "inspectorUsername",
+      "value": "inspector"
+    },
+    {
+      "key": "inspectorPassword",
+      "value": ""
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "HUB01 — Registrar zona 1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/zones",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Sector totoral\",\n  \"location\": \"Humedal, sector 1\",\n  \"areaHectares\": 10,\n  \"interventionDate\": \"14/10/2026\",\n  \"status\": \"EN RESTAURACIÓN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+              "pm.test(\"Objeto creado\", () => pm.expect(pm.response.json().idZona).to.be.a(\"number\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "HUB01 — Registrar zona 2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/zones",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Sector juncal\",\n  \"location\": \"Humedal, sector 2\",\n  \"areaHectares\": 12,\n  \"interventionDate\": \"14/10/2026\",\n  \"status\": \"EN RESTAURACIÓN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+              "pm.test(\"Objeto creado\", () => pm.expect(pm.response.json().idZona).to.be.a(\"number\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "HUB01 — Registrar zona 3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/zones",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Laguna norte\",\n  \"location\": \"Humedal, sector 3\",\n  \"areaHectares\": 14,\n  \"interventionDate\": \"14/10/2026\",\n  \"status\": \"EN RESTAURACIÓN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+              "pm.test(\"Objeto creado\", () => pm.expect(pm.response.json().idZona).to.be.a(\"number\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "HUB01 — Registrar zona 4",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/zones",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ribera sur\",\n  \"location\": \"Humedal, sector 4\",\n  \"areaHectares\": 16,\n  \"interventionDate\": \"14/10/2026\",\n  \"status\": \"EN RESTAURACIÓN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+              "pm.test(\"Objeto creado\", () => pm.expect(pm.response.json().idZona).to.be.a(\"number\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "HUB01 — Registrar zona 5",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/zones",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Franja de amortiguamiento\",\n  \"location\": \"Humedal, sector 5\",\n  \"areaHectares\": 18,\n  \"interventionDate\": \"14/10/2026\",\n  \"status\": \"EN RESTAURACIÓN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+              "pm.test(\"Objeto creado\", () => pm.expect(pm.response.json().idZona).to.be.a(\"number\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Login INSPECTOR",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"{{inspectorUsername}}\",\n  \"password\": \"{{inspectorPassword}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+              "if (pm.response.code === 200) { pm.collectionVariables.set(\"token\", pm.response.json().accessToken); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "HUB02 — Reporte con INSPECTOR",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": "{{baseUrl}}/monitors"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });",
+              "pm.test(\"Reporte JSON\", function () { const rows=pm.response.json(); pm.expect(rows).to.be.an(\"array\"); rows.forEach(r => { pm.expect(r).to.have.keys(\"date\", \"cantidad \"); pm.expect(r.date).to.match(/^\\d{2}\\/\\d{2}\\/\\d{4}$/); }); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "HUB02 — Sin token (401)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/monitors"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 401\", function () { pm.response.to.have.status(401); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "HUB01 — Campos vacíos (400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/zones",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"\",\n  \"location\": \"\",\n  \"areaHectares\": 10,\n  \"interventionDate\": \"14/10/2026\",\n  \"status\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "HUB01 — Área no positiva (400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/zones",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Sector inválido\",\n  \"location\": \"Ribera norte\",\n  \"areaHectares\": 0,\n  \"interventionDate\": \"14/10/2026\",\n  \"status\": \"EN RESTAURACIÓN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
